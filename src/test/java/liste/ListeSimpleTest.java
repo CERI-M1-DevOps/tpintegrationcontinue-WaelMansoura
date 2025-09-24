@@ -213,7 +213,7 @@ import static org.junit.jupiter.api.Assertions.*;
         listeATester.inverser();
         assertEquals("ListeSimple(Noeud(1), Noeud(2), Noeud(3))", listeATester.toString());
     }
-
+    
     @Test
      void echanger2NoeudsQuelconques() {
         listeATester.ajout(5);
@@ -256,5 +256,16 @@ import static org.junit.jupiter.api.Assertions.*;
         listeATester.echanger(r1, r2);
         System.out.println(listeATester);
         assertEquals("ListeSimple(Noeud(4), Noeud(2), Noeud(3), Noeud(1), Noeud(5))", listeATester.toString());
+    }
+
+    @Test
+    void echangerLeMemeNoeud(){
+        listeATester.ajout(5);
+        Noeud r2 = listeATester.tete;
+        Noeud r1 = listeATester.tete;
+        listeATester.echanger(r1, r2);
+        assertEquals( "ListeSimple(Noeud(5))",listeATester.toString());
+        
+    
     }
 }
