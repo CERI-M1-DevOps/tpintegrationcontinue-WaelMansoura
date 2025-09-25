@@ -9,6 +9,8 @@ jobs:
     # Ne s'exécute que si la PR a été mergée (pas juste fermée)
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     
     steps:
     - name: Checkout code
